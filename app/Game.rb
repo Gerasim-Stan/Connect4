@@ -45,7 +45,7 @@ def pick_game
   end
 end
 
-pick_game if File.exists?('game_save')
+File.exists?('game_save') ?  pick_game : start_new_game
 
 (@board_height + 2).times {puts "\n"}
 
